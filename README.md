@@ -30,7 +30,7 @@ To start the application in development mode:
 npm start
 \```
 
-This will start the application and open a new browser tab pointing to `http://localhost:3000` or another open port if 3000 is busy.
+This will start the application and open a new browser tab pointing to `http://localhost:3000` or another open port if 3000 is being used.
 
 The application provides a simple interface with a microphone icon and a text input field. Click on the microphone icon and start speaking. Your speech will be converted to text and populated in the text input field.
 
