@@ -7,7 +7,7 @@ A React application demonstrating the usage of the `startsys-react-speech-recogn
 First, clone this repository to your local machine using:
 
 \```bash
-git clone <repository-url>
+git clone https://github.com/tulaneadam/startsys-react-speech-recognition-v2.git
 \```
 
 Navigate to the directory:
@@ -30,7 +30,7 @@ To start the application in development mode:
 npm start
 \```
 
-This will start the application and open a new browser tab pointing to `http://localhost:3000`.
+This will start the application and open a new browser tab pointing to `http://localhost:3000` or another open port if 3000 is busy.
 
 The application provides a simple interface with a microphone icon and a text input field. Click on the microphone icon and start speaking. Your speech will be converted to text and populated in the text input field.
 
