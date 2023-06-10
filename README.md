@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# Startsys React Speech Recognition v2
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React application demonstrating the usage of the `startsys-react-speech-recognition` npm package. This package allows your React applications to leverage the Web Speech API for speech recognition functionality.
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+First, clone this repository to your local machine using:
 
-### `npm start`
+\```bash
+git clone <repository-url>
+\```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Navigate to the directory:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+\```bash
+cd startsys-react-speech-recognition-v2
+\```
 
-### `npm test`
+Install the required dependencies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+\```bash
+npm install
+\```
 
-### `npm run build`
+## Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To start the application in development mode:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+\```bash
+npm start
+\```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This will start the application and open a new browser tab pointing to `http://localhost:3000`.
 
-### `npm run eject`
+The application provides a simple interface with a microphone icon and a text input field. Click on the microphone icon and start speaking. Your speech will be converted to text and populated in the text input field.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Deployment
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To build the application for production, run:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+\```bash
+npm run build
+\```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This will create a `build/` directory with all the compiled files. Your application is now ready for deployment.
 
-## Learn More
+## Using the `startsys-react-speech-recognition` npm Package
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This application makes use of the `startsys-react-speech-recognition` npm package. If you wish to use this package in your own projects, install it via npm:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+\```bash
+npm install startsys-react-speech-recognition
+\```
 
-### Code Splitting
+Import it in your React component:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+\```javascript
+import Speech from 'startsys-react-speech-recognition';
+\```
 
-### Analyzing the Bundle Size
+And use it in your JSX:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+\```javascript
+<Speech onSpeech={(text) => console.log(text)} />
+\```
 
-### Making a Progressive Web App
+This will render a microphone icon that, when clicked, starts the speech recognition process. The recognized text can be logged to the console with the line above added to the react component, or the text can be added to an input element as shown in this demo app.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Please ensure that the users' browser supports the Web Speech API.
 
-### Advanced Configuration
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Contributions are welcome. Please open an issue or submit a pull request.
 
-### Deployment
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License.
