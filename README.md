@@ -46,6 +46,9 @@ This will create a `build/` directory with all the compiled files. Your applicat
 
 ## Using the `startsys-react-speech-recognition` npm Package
 
+[Startsys-react-speech-recognition](https://www.npmjs.com/package/startsys-react-speech-recognition)
+
+
 This application makes use of the `startsys-react-speech-recognition` npm package. If you wish to use this package in your own projects, install it via npm:
 
 \```bash
@@ -64,9 +67,41 @@ And use it in your JSX:
 <Speech onSpeech={(text) => console.log(text)} />
 \```
 
-This will render a microphone icon that, when clicked, starts the speech recognition process. The recognized text can be logged to the console with the line above added to the react component, or the text can be added to an input element as shown in this demo app.
+This will render a microphone icon that, when clicked, starts the speech recognition process. The recognized text can be logged to the console with the line above added to the react component, or the text can be added to an input element as shown in this demo app with the below App.js file.
 
 Please ensure that the users' browser supports the Web Speech API.
+
+\```javascript
+import React, { useState } from "react";
+import Speech from 'startsys-react-speech-recognition';
+import { FaMicrophone } from 'react-icons/fa';
+
+function App() {
+  const [transcript, setTranscript] = useState("");
+  
+  const handleSpeech = (command) => {
+    setTranscript(command);
+  };
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>Speech Recognition App</h1>
+        <h3>Please click on the mic to begin the speech recognition demo.</h3>
+        <div className="input-group">
+          <Speech onSpeech={handleSpeech}>
+            <FaMicrophone className="fas fa-2x" />
+          </Speech>
+          <input type="text" value={transcript} readOnly />
+        </div>
+      </header>
+    </div>
+  );
+}
+
+export default App;
+
+\```
 
 ## Contributing
 
