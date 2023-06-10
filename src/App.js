@@ -16,7 +16,7 @@ function App() {
         <h3>Please click on the mic to begin the speech recognition demo.</h3>
         <div className="input-group">
           <Speech onSpeech={handleSpeech}>
-            <FaMicrophone className="fas fa-2x" />
+          <FaMicrophone className="fas fa-2x" aria-label="microphone icon" />
           </Speech>
           <input type="text" value={transcript} readOnly />
         </div>
